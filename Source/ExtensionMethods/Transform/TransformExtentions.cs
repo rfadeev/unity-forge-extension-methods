@@ -95,5 +95,33 @@ namespace UnityForge
         {
             transform.localPosition = Vector3Utils.SetVectorZ(transform.localPosition, value);
         }
+
+        public static void AddChild(this Transform transform, GameObject childGameObject)
+        {
+            childGameObject.transform.SetParent(transform, false);
+        }
+
+        public static void AddChild(this Transform transform, GameObject childGameObject, bool worldPositionStays)
+        {
+            childGameObject.transform.SetParent(transform, worldPositionStays);
+        }
+
+        public static void AddChild(this Transform transform, Transform childTransform)
+        {
+            childTransform.SetParent(transform, false);
+        }
+
+        public static void AddChild(this Transform transform, Transform childTransform, bool worldPositionStays)
+        {
+            childTransform.SetParent(transform, worldPositionStays);
+        }
+
+        public static void DestroyChildren(this Transform transform)
+        {
+            for (var i = 0; i < transform.childCount; ++i)
+            {
+                Object.Destroy(transform.GetChild(i).gameObject);
+            }
+        }
     }
 }

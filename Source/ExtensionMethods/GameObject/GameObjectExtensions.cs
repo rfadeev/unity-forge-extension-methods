@@ -29,5 +29,30 @@ namespace UnityForge
                 child.gameObject.SetTagRecursively(tag);
             }
         }
+
+        public static void AddChild(this GameObject gameObject, GameObject childGameObject)
+        {
+            childGameObject.transform.SetParent(gameObject.transform, false);
+        }
+
+        public static void AddChild(this GameObject gameObject, GameObject childGameObject, bool worldPositionStays)
+        {
+            childGameObject.transform.SetParent(gameObject.transform, worldPositionStays);
+        }
+
+        public static void AddChild(this GameObject gameObject, Transform childTransform)
+        {
+            childTransform.SetParent(gameObject.transform, false);
+        }
+
+        public static void AddChild(this GameObject gameObject, Transform childTransform, bool worldPositionStays)
+        {
+            childTransform.SetParent(gameObject.transform, worldPositionStays);
+        }
+
+        public static void DestroyChildren(this GameObject gameObject)
+        {
+            gameObject.transform.DestroyChildren();
+        }
     }
 }
