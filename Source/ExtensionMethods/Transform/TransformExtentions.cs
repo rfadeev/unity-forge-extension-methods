@@ -48,7 +48,7 @@ namespace UnityForge
         /// <param name="value">Value of x component.</param>
         public static void SetPositionX(this Transform transform, float value)
         {
-            transform.position = Vector3Utils.SetVectorX(transform.position, value);
+            transform.position = Vector3Utils.SetX(transform.position, value);
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace UnityForge
         /// <param name="value">Value of y component.</param>
         public static void SetPositionY(this Transform transform, float value)
         {
-            transform.position = Vector3Utils.SetVectorY(transform.position, value);
+            transform.position = Vector3Utils.SetY(transform.position, value);
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace UnityForge
         /// <param name="value">Value of z component.</param>
         public static void SetPositionZ(this Transform transform, float value)
         {
-            transform.position = Vector3Utils.SetVectorZ(transform.position, value);
+            transform.position = Vector3Utils.SetZ(transform.position, value);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace UnityForge
         /// <param name="value">Value of x component.</param>
         public static void SetLocalPositionX(this Transform transform, float value)
         {
-            transform.localPosition = Vector3Utils.SetVectorX(transform.localPosition, value);
+            transform.localPosition = Vector3Utils.SetX(transform.localPosition, value);
         }
 
         /// <summary>
@@ -84,7 +84,7 @@ namespace UnityForge
         /// <param name="value">Value of y component.</param>
         public static void SetLocalPositionY(this Transform transform, float value)
         {
-            transform.localPosition = Vector3Utils.SetVectorY(transform.localPosition, value);
+            transform.localPosition = Vector3Utils.SetY(transform.localPosition, value);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace UnityForge
         /// <param name="value">Value of z component.</param>
         public static void SetLocalPositionZ(this Transform transform, float value)
         {
-            transform.localPosition = Vector3Utils.SetVectorZ(transform.localPosition, value);
+            transform.localPosition = Vector3Utils.SetZ(transform.localPosition, value);
         }
 
         public static void AddChild(this Transform transform, GameObject childGameObject)
